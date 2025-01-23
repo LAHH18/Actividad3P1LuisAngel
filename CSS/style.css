@@ -1,0 +1,90 @@
+:root{
+    --blanco: #ffffff;
+    --amarrillo: #fdd835;
+    --moradoOscuro: #4a148c;
+    --morado: #6a1b9a;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background-color: var(--morado); 
+    color: var(--moradoOscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculadora {
+    background: var(--amarrillo);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(248, 245, 35, 0.2); 
+    text-align: center;
+    width: 360px;
+    border: 2px solid var(--amarrillo);
+}
+
+.calculadora h1, h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--morado);
+}
+
+.calculadora input {
+    width: 90%;
+    padding: 14px;
+    font-size: 16px;
+    border: 2px solid var(--amarrillo);
+    border-radius: 8px;
+    background-color: var(--blanco);
+    margin-bottom: 20px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.calculadora input:focus {
+    border-color: var(--morado);
+    box-shadow: 0 0 8px rgba(106, 27, 154, 0.5); 
+    outline: none;
+}
+
+.botones button {
+    margin: 10px 5px;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--morado);
+    color: var(--blanco);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botones button:hover {
+    background-color: var(--moradoOscuro);
+}
+
+.botones button:active {
+    transform: scale(0.95);
+}
+
+#resultado {
+    margin-top: 25px;
+    font-size: 18px;
+    color: var(--moradoOscuro); 
+    font-weight: 600;
+    padding-top: 10px;
+    border-top: 2px solid var(--moradoOscuro); 
+}
+
+@media (max-width: 480px){
+    .botones{
+        display: block;
+    }
+    .botones button {
+        width: 100%; /* Los botones ocuparán el 100% del ancho */
+    }
+}
